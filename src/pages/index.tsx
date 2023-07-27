@@ -1,3 +1,4 @@
+import LandingLayout from '@/layouts/LandingLayout'
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -11,7 +12,7 @@ export default function Landing() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        
+        <LandingLayout />
       </main>
     </>
   )
