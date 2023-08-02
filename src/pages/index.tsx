@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Hero from '../components/Hero'
 
 export default function Landing() {
   return (
@@ -11,7 +12,7 @@ export default function Landing() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        
+          <Hero />
       </main>
     </>
   )
