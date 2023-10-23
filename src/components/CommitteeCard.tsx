@@ -32,7 +32,7 @@ export default function CommitteeCard(props: { committeeInfo: committeeInfo_T}) 
           </Text>
 
           <Button variant="light" color="blue" fullWidth mt="md" radius="md"
-                  component='a' href={ props.committeeInfo.platformLink } target='_blank'>
+                   href={ props.committeeInfo.platformLink } target='_blank'>
             { props.committeeInfo.platformName }
           </Button>
         </Card>
