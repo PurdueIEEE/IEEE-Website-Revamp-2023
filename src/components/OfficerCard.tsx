@@ -11,13 +11,13 @@ export interface officersInfo_T {
 
 export default function OfficerCard(props: { officersInfo: officersInfo_T }) {
 	const committeeBadges = props.officersInfo.committees.map((committee) =>
-    <Badge>
+    	<Badge>
 			{committee}
 		</Badge>
 	)
 
 	return (
-		<Card shadow="sm" p="lg" radius="md" withBorder>
+		<Card shadow="lg" p="lg" radius="md" w={320} withBorder>
 			<Card.Section>
 				<Image
 					src={props.officersInfo.img}
@@ -37,9 +37,11 @@ export default function OfficerCard(props: { officersInfo: officersInfo_T }) {
 				{props.officersInfo.desc}
 			</Text>
 
-			<Anchor href={`mailto:${props.officersInfo.email}`} target="_blank" rel="noopener noreferrer">
-				<img className='w-8 mt-5' src="https://cdn0.iconfinder.com/data/icons/social-circle-3/72/Email-64.png" alt="" />
-			</Anchor>
+			<div className="flex items-center mt-5">
+				<Anchor href={`mailto:${props.officersInfo.email}`} target="_blank" rel="noopener noreferrer">
+					<img className="w-8" src="https://cdn0.iconfinder.com/data/icons/social-circle-3/72/Email-64.png" alt="" />
+				</Anchor>
+      		</div>
 		</Card>
 	);
 }
